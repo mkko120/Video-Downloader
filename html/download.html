@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="downloadStyle.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/downloadStyle.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>El Rincón de Pepe</title>
 </head>
 
@@ -20,13 +21,19 @@
       <h1 class="overview-header">Descargar</h1>
     </div>
     <div class="main-form">
-      <form action="index.html" method="post" id="searchForm">
-        <input type="search" name="searchBar" value="" placeholder="Pega aquí la dirección de la página web en la que se encuentra el vídeo que quieres descargar" class="search-bar form-control">
+      <form id="searchForm">
+        <input type="search" name="searchBar" id="url" value="" placeholder="Pega aquí la dirección de la página web en la que se encuentra el vídeo que quieres descargar" class="search-bar form-control">
+
+        <select class="form-select" id="type">
+          <option value="null">Please select result type</option>
+          <option value="audio">Audio</option>
+          <option value="video">Video</option>
+        </select>
+
         <div class="main-form-buttons">
           <!-- I have given the buttons the same names as their respective classes
           so that I can easily tell which button has been pressed. -->
-          <button type="submit" name="video" class="btn btn-outline-dark btn-left both-btn">Audio y Vídeo</button>
-          <button type="submit" name="audio" class="btn btn-outline-dark btn-right audio-btn">Solo Audio</button>
+          <button type="submit" class="btn btn-outline-dark btn-right audio-btn">Submit</button>
         </div>
       </form>
     </div>
@@ -35,7 +42,18 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  <script src="download.js" charset="utf-8"></script>
+  <script>
+      $('#searchForm').submit(function(event) {
+          event.preventDefault();
+          if ($('#type').val() === 'null') return;
+          if ($('#url').val() === 'null') return;
+          let url_v = $('#url').val().split('/');
+          console.log(url_v)
+          let url_ready = url_v[3].split('=')
+          console.log(url_ready)
+          window.open('http://' +window.location.host + `/download/${$('#type').val()}/${url_ready[1]}`)
+      })
+  </script>
 </body>
 
 </html>
