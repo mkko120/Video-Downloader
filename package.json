@@ -1,0 +1,16 @@
+{
+  "name": "conversor-de-pepe",
+  "version": "1.0.0",
+  "description": "A simple video downloader and coverter from www.rincondepepe.es",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iván Aguilar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "ytdl-core": "^4.9.1"
+  }
+}

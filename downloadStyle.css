@@ -1,0 +1,37 @@
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 130px;
+}
+
+.main-header {
+  margin-bottom: 100px;
+}
+
+.main-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+}
+
+input {
+  text-align: center;
+}
+
+.main-form-buttons {
+  margin-top: 50px;
+}
+
+.main p {
+  margin-top: 150px;
+}

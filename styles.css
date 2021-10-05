@@ -1,0 +1,111 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  /* The following gradient has three colors (points) to create the effect of
+	a more intense blue that starts fading only after it reaches 50% of the vh */
+  background: linear-gradient(#F1FCFB, #F1FCFB, white);
+  font-family: "Open Sans", sans-serif;
+  margin: auto 200px;
+  max-height: 100vh;
+}
+
+.overview {
+  display: flex;
+  /* This avoids wrapping the items (takinng a new line) if they can't all be made
+	to fit on one line */
+  flex-wrap: nowrap;
+  margin-top: 50px;
+}
+
+.overview p {
+  line-height: 1.7;
+  margin: 10px auto auto 7px;
+}
+
+.overview-header {
+  font-family: "Boogaloo", cursive;
+  font-size: 100px;
+}
+
+.grandad-image {
+  /* The next two lines allow us to center the image within the cotainer */
+  display: block;
+  margin: auto;
+  max-height: 450px;
+  max-width: 450px;
+}
+
+.overview-image {
+  /* This is the flexbox property that defines the size of an element before
+	remaining space is distributed!! */
+  flex-basis: 50%;
+}
+
+.overview-text {
+  flex-basis: 50%;
+  flex-grow: 1;
+  margin-top: 80px;
+}
+
+.main-prompt {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 100px;
+}
+
+.main-prompt-header {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.btn-left, .btn-right {
+  border-radius: 10px;
+  padding: 7px 17px;
+}
+
+.btn-left {
+  margin-right: 30px;
+}
+
+.btn-right {
+  margin-left: 30px;
+}
+
+.bi{
+  color: black;
+  /* This was a headache as I forgot that anchor tags are inline elements and,
+  therefore, I cannot set margin */
+  display: inline-block;
+  text-decoration: none;
+}

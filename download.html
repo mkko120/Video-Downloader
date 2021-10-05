@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="downloadStyle.css">
+  <title>El Rincón de Pepe</title>
+</head>
+
+<body>
+  <a class="bi bi-house-door-fill h4 mt-4" href="index.html"> Inicio </a>
+  <section class="main">
+    <div class="main-header">
+      <h1 class="overview-header">Descargar</h1>
+    </div>
+    <div class="main-form">
+      <form action="index.html" method="post" id="searchForm">
+        <input type="search" name="searchBar" value="" placeholder="Pega aquí la dirección de la página web en la que se encuentra el vídeo que quieres descargar" class="search-bar form-control">
+        <div class="main-form-buttons">
+          <!-- I have given the buttons the same names as their respective classes
+          so that I can easily tell which button has been pressed. -->
+          <button type="submit" name="video" class="btn btn-outline-dark btn-left both-btn">Audio y Vídeo</button>
+          <button type="submit" name="audio" class="btn btn-outline-dark btn-right audio-btn">Solo Audio</button>
+        </div>
+      </form>
+    </div>
+    <p>(Por defecto, el vídeo se descargará en mp4 y el audio en mp3)</p>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="download.js" charset="utf-8"></script>
+</body>
+
+</html>
